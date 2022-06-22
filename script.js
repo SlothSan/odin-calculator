@@ -14,7 +14,24 @@ function divide (a, b) {
     console.log( a / b );
 }
 
-add(12, 8);
-subtract(10, 11);
-multiply(10, 50);
-divide(1251, 4);
+
+function operate (a, operator, b) {
+    switch (operator) {
+        case "+":
+            add(a, b);
+            break;
+        case "-":
+            subtract(a, b);
+            break;
+        case "*":
+            multiply(a, b);
+            break;
+        case "/":
+            divide(a, b);
+            break;
+        default: 
+            console.log("You shouldn't see this");
+    }
+}
+
+operate(10, "/", 10);
