@@ -8,6 +8,7 @@ html body {
     background-color: lightgray;
     font-size: 16px;
     color: black;
+    font-family: Helvetica;
 }
 
 #content-wrapper {
@@ -37,4 +38,26 @@ html body {
     align-self: center;
     background-color: grey;
     border: 10px solid black;
+    border-radius: 10px;
 }
+
+#display-container {
+    width: 80%;
+    height: 15%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+    background-color: #78d9de;
+    border-radius: 10px;
+    text-align: right;
+    position: relative;
+}
+
+#display-container > #display {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-right: 2%;
+    font-size: 48px;
+}
+
