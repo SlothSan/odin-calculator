@@ -89,7 +89,6 @@ button {
     font-size: 36px;
     font-weight: bold;
     border-radius: 20px;
-    background-color: lightgrey;
     font-family: 'Orbitron', sans-serif;
     cursor: pointer;
 }
@@ -99,9 +98,29 @@ button {
     color: white;
 }
 
+.operator:active, .equals:active {
+    background-color: white;
+    color: orange;
+}
+
 .clear, .sign, .percent {
     background-color: slateblue;
     color: white;
+}
+
+.clear:active, .sign:active, .percent:active {
+    background-color: white;
+    color: slateblue;
+}
+
+.operand, .decimal {
+    background-color: #228C22;
+    color: white;
+}
+
+.operand:active, .decimal:active {
+    background-color: white;
+    color: #228C22;
 }
 
 .zero {
@@ -116,14 +135,12 @@ button {
     height: 25%;
 }
 
-.operand, .decimal {
-    background-color: aquamarine;
-}
+
 
 #header {
     position: absolute;
     top: 0;
-    width: 35vw;
+    width: 27vw;
     height: 60px;
     background: orange;
     border-bottom-left-radius: 25px;
