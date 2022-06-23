@@ -24,13 +24,17 @@ function addEventButtons() {
     for (let i = 0; i < buttons.length; i++) {
         buttons[i].addEventListener(`click`, function() {
             if (buttons[i].classList.contains(`operand`)) {
-                console.log("I am an operand!")
                 inputOperand(buttons[i].value);
                 updateDisplay();
             } else if (buttons[i].classList.contains(`operator`)) {
+                console.log("I am an operator!")
                 inputOperator(buttons[i].value);
+                updateDisplay();
             } else if (buttons[i].classList.contains(`clear`)) {
                 clearDisplay();
+                updateDisplay();
+            } else if (buttons[i].classList.contains(`equals`)) {
+                equals()
                 updateDisplay();
             }
         });
@@ -59,16 +63,64 @@ function inputOperand(operand){
 };
 
 
-function inputOperator() {
+function inputOperator(operator) {
     if (firstOperator != null && secondOperator === null) {
         //This if handles the input of a second operator.
         secondOperator = operator;
         secondOperand = displayValue;
         result = operate(Number(firstOperand), Number(secondOperand), firstOperator);
-        displayValue = 
+        displayValue = accuratelyRound(result, 15).toString();
+        firstOperand = displayValue;
+        result = null;
+    } else if (firstOperand != null && secondOperator != null) {
+        //Handles a 3rd operator.
+        secondOperand = displayValue;
+        result = operate(Number(firstOperand), Number(secondOperand), secondOperator);
+        secondOperator = operator;
+        displayValue = accuratelyRound(result, 15).toString();
+        firstOperand = displayValue;
+        result = null;
+
+    } else {
+        //Handles 2nd Operator
+        firstOperator = operator;
+        firstOperand = displayValue;
     }
 }
 
+
+function equals () {
+    //This if stops undefined showing if equals entered before an operator
+    if (firstOperator === null) {
+        displayValue = displayValue;
+    } else if (secondOperator != null) { //This else if handles the final result. 
+        secondOperand = displayValue;
+        result = operate(Number(firstOperand), Number(secondOperand), secondOperator);
+        if (result === `don't / 0`) {
+            displayValue = `don't / 0`;
+        } else {
+            displayValue = accuratelyRound(result, 15).toString();
+            firstOperand = displayValue;
+            secondOperand = null;
+            firstOperator = null;
+            secondOperator = null;
+            result = null;
+        }
+    } else {
+        secondOperand = displayValue;
+        result = operate(Number(firstOperand), Number(secondOperand), firstOperator);
+        if (result === `don't / 0`) {
+            displayValue = `don't / 0`;
+        } else {
+            displayValue = accuratelyRound(result, 15).toString();
+            firstOperand = displayValue;
+            secondOperand = null;
+            firstOperator = null;
+            secondOperator = null;
+            result = null;
+        }
+    }
+};
 
 
 
@@ -104,3 +156,9 @@ function operate (a, b, op) {
         return a * b;
     }
 };
+
+//Round results accurately function to be called in other functions. 
+
+function accuratelyRound(num, places) {
+    return parseFloat(Math.round(num + `e` + places) + `e-` + places);
+}
