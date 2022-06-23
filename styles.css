@@ -32,9 +32,9 @@ html body {
     display: flex;
     flex-direction: column;
     width: 35vw;
-    height: 50vw;
+    height: 75vh;
     max-width: 750px;
-    max-height: 750px;
+    max-height: 1000px;
     align-self: center;
     background-color: grey;
     border: 10px solid black;
@@ -46,7 +46,8 @@ html body {
     height: 15%;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 10%;
+    margin-top: 7.5%;
+    margin-bottom: 7.5%;
     background-color: #78d9de;
     border-radius: 10px;
     text-align: right;
@@ -81,3 +82,22 @@ html body {
     height: 100%;
 }
 
+button {
+    height: 25%;
+    margin-bottom: 5px;
+    font-size: 48px;
+    font-weight: bold;
+    border-radius: 20px;
+    background-color: lightgrey;
+    cursor: pointer;
+}
+
+#equals {
+    background-color: orange;
+    color: White;
+}
+
+#clear {
+    background-color: crimson;
+    color: white;
+}
