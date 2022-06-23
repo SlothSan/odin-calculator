@@ -1,3 +1,5 @@
+
+//Maths Functions
 function add (a, b) {
     console.log( a + b );
 }
@@ -14,7 +16,7 @@ function divide (a, b) {
     console.log( a / b );
 }
 
-
+//Operate Function
 function operate (a, operator, b) {
     switch (operator) {
         case "+":
