@@ -36,6 +36,9 @@ function addEventButtons() {
             } else if (buttons[i].classList.contains(`equals`)) {
                 equals()
                 updateDisplay();
+            } else if (buttons[i].classList.contains(`decimal`)) {
+                inputDecimals(buttons[i].value);
+                updateDisplay();
             }
         });
     }
@@ -62,7 +65,7 @@ function inputOperand(operand){
     }
 };
 
-
+//Function for inputing operator and getting results
 function inputOperator(operator) {
     if (firstOperator != null && secondOperator === null) {
         //This if handles the input of a second operator.
@@ -88,7 +91,7 @@ function inputOperator(operator) {
     }
 }
 
-
+//Function for equals and getting results.
 function equals () {
     //This if stops undefined showing if equals entered before an operator
     if (firstOperator === null) {
@@ -122,11 +125,15 @@ function equals () {
     }
 };
 
-
-
-
-
-
+//Function for inputing decimals.
+function inputDecimals (dot) {
+    if (displayValue === firstOperand || displayValue === secondOperand) {
+        displayValue = 0;
+        displayValue += dot;
+    } else if (!displayValue.includes(dot)) {
+        displayValue += dot;
+    }
+};
 
 
 
