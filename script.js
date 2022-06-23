@@ -27,6 +27,8 @@ function addEventButtons() {
                 console.log("I am an operand!")
                 inputOperand(buttons[i].value);
                 updateDisplay();
+            } else if (buttons[i].classList.contains(`operator`)) {
+                inputOperator(buttons[i].value);
             } else if (buttons[i].classList.contains(`clear`)) {
                 clearDisplay();
                 updateDisplay();
@@ -57,6 +59,16 @@ function inputOperand(operand){
 };
 
 
+function inputOperator() {
+    if (firstOperator != null && secondOperator === null) {
+        //This if handles the input of a second operator.
+        secondOperator = operator;
+        secondOperand = displayValue;
+        result = operate(Number(firstOperand), Number(secondOperand), firstOperator);
+        displayValue = 
+    }
+}
+
 
 
 
@@ -75,3 +87,20 @@ function clearDisplay() {
     secondOperator = null;
     result = null;
 }
+
+//operate function to be called in other functions 
+function operate (a, b, op) {
+    if (op === "+") {
+        return a + b;
+    } else if (op === "-") {
+        return a - b;
+    } else if (op === "/") {
+        if (b === 0) {
+            return `don't / 0`
+        } else {
+            return a / b;
+        }
+    } else if (op === "*") {
+        return a * b;
+    }
+};
