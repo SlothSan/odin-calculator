@@ -9,9 +9,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles.css">
+    <script src="https://kit.fontawesome.com/3824660a61.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div id="content-wrapper">
+        <div id="header">
+            <p class="link">Created by Mike Oram 2022 <a class="link" target="_blank" href="https://github.com/SlothSan"><i class="fa-brands fa-github fa-xl fa-spin-hover"></i></a></p>
+        </div>
         <div id="body container">
             <div id="calculator-container">
                 <div id="display-container"><span id=display></span></div>
@@ -21,9 +25,9 @@
                         <button type="button" value="7" class="operand">7</button>
                         <button type="button" value="4" class="operand">4</button>
                         <button type="button" value="1" class="operand">1</button>
-                        <button type="button" value="0" class="operand">0</button>
+                        <button type="button" value="0" class="operand zero">0</button>
                     </div>
-                    <div id="button-col">
+                    <div id="button-col" class="col-two">
                         <button type="button" value="sign" class="sign">+/-</button>
                         <button type="button" value="8" class="operand">8</button>
                         <button type="button" value="5" class="operand">5</button>
