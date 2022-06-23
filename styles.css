@@ -59,7 +59,8 @@ html body {
     bottom: 0;
     right: 0;
     margin-right: 2%;
-    font-size: 36px;
+    margin-bottom: 3%;
+    font-size: 48px;
 }
 
 #button-container {
@@ -93,6 +94,7 @@ button {
     cursor: pointer;
 }
 
+/*
 #equals, #add, #divide, #multiply, #minus {
     background-color: orange;
     color: White;
@@ -102,3 +104,4 @@ button {
     background-color: crimson;
     color: white;
 }
+*/
