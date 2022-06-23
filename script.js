@@ -27,7 +27,6 @@ function addEventButtons() {
                 inputOperand(buttons[i].value);
                 updateDisplay();
             } else if (buttons[i].classList.contains(`operator`)) {
-                console.log("I am an operator!")
                 inputOperator(buttons[i].value);
                 updateDisplay();
             } else if (buttons[i].classList.contains(`clear`)) {
@@ -41,6 +40,9 @@ function addEventButtons() {
                 updateDisplay();
             } else if (buttons[i].classList.contains(`sign`)) {
                 inputSign(displayValue);
+                updateDisplay();
+            } else if (buttons[i].classList.contains(`percent`)) {
+                inputPercent(displayValue);
                 updateDisplay();
             }
         });
@@ -142,6 +144,11 @@ function inputDecimals (dot) {
 function inputSign (num) {
     displayValue = (num * -1).toString();
 };
+
+//Function for percentage. 
+function inputPercent (num) {
+    displayValue = (num / 100).toString();
+}
 
 //Clear display function / reset all variables 
 function clearDisplay() {
