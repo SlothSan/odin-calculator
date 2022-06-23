@@ -8,7 +8,7 @@ html body {
     background-color: lightgray;
     font-size: 16px;
     color: black;
-    font-family: Helvetica;
+    font-family: 'Orbitron', sans-serif;
 }
 
 #content-wrapper {
@@ -42,7 +42,7 @@ html body {
 }
 
 #display-container {
-    width: 80%;
+    width: 90%;
     height: 15%;
     margin-left: auto;
     margin-right: auto;
@@ -89,6 +89,7 @@ button {
     font-weight: bold;
     border-radius: 20px;
     background-color: lightgrey;
+    font-family: 'Orbitron', sans-serif;
     cursor: pointer;
 }
 
