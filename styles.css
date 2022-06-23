@@ -62,11 +62,22 @@ html body {
 }
 
 #button-container {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
     width: 90%;
     height: 100%;
     margin-left: auto;
     margin-right: auto;
     margin-top: 2.5%;
     margin-bottom: 2.5%;
+}
+
+#button-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 25%;
+    height: 100%;
 }
 
