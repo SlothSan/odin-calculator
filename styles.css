@@ -92,7 +92,7 @@ button {
     cursor: pointer;
 }
 
-#equals {
+#equals, #add, #divide, #multiply, #minus {
     background-color: orange;
     color: White;
 }
