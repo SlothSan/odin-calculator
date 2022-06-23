@@ -39,6 +39,9 @@ function addEventButtons() {
             } else if (buttons[i].classList.contains(`decimal`)) {
                 inputDecimals(buttons[i].value);
                 updateDisplay();
+            } else if (buttons[i].classList.contains(`sign`)) {
+                inputSign(displayValue);
+                updateDisplay();
             }
         });
     }
@@ -135,7 +138,10 @@ function inputDecimals (dot) {
     }
 };
 
-
+//Function for sign 
+function inputSign (num) {
+    displayValue = (num * -1).toString();
+};
 
 //Clear display function / reset all variables 
 function clearDisplay() {
@@ -145,7 +151,7 @@ function clearDisplay() {
     firstOperator = null;
     secondOperator = null;
     result = null;
-}
+};
 
 //operate function to be called in other functions 
 function operate (a, b, op) {
