@@ -154,7 +154,8 @@ button {
     color: white;
     font-size: 24px;
     text-decoration: none;
-    transition: all .7s ease-in-out;
+    transition: fa-spin .7s ease-in-out;
+    transition: transform 0.7s ease-in-out;
 }
 
 .fa-spin-hover:hover {
