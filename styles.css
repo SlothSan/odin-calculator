@@ -71,7 +71,7 @@ html body {
     margin-bottom: 10px;
 }
 
-#button-col {
+.button-col {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -87,6 +87,10 @@ button {
     border-radius: 20px;
     font-family: 'Orbitron', sans-serif;
     cursor: pointer;
+}
+
+.clear {
+    font-size: 1rem;
 }
 
 .operator, .equals {
