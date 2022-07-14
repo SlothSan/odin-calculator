@@ -20,30 +20,25 @@ html body {
     justify-content: center;
 }
 
-#body-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 70vh;
-    gap: 100px;
-}
-
-#calculator-container {
+.calculator-container {
     display: flex;
     flex-direction: column;
-    width: 35vw;
-    height: 75vh;
-    max-width: 700px;
-    max-height: 900px;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    width: 350px;
     align-self: center;
     background-color: grey;
     border: 10px solid black;
     border-radius: 10px;
 }
 
-#display-container {
+.display-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
     width: 90%;
-    height: 25%;
+    height: 20%;
     margin-left: auto;
     margin-right: auto;
     margin-top: 3.5%;
@@ -52,18 +47,19 @@ html body {
     border-radius: 10px;
     text-align: right;
     position: relative;
+    border: 2px solid darkgray;
 }
 
-#display-container > #display {
+.display {
     position: absolute;
     bottom: 0;
     right: 0;
-    margin-right: 2%;
-    margin-bottom: 5%;
-    font-size: 72px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    font-size: 2.4em;
 }
 
-#button-container {
+.button-container {
     display: flex;
     flex-direction: row;
     gap: 2px;
