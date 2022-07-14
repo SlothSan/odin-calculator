@@ -11,7 +11,7 @@ html body {
     font-family: 'Orbitron', sans-serif;
 }
 
-#content-wrapper {
+.container {
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -72,7 +72,7 @@ html body {
     margin-left: auto;
     margin-right: auto;
     margin-top: 2px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 #button-col {
@@ -86,7 +86,7 @@ html body {
 button {
     height: 25%;
     margin-bottom: 5px;
-    font-size: 36px;
+    font-size: 1.5rem;
     font-weight: bold;
     border-radius: 20px;
     font-family: 'Orbitron', sans-serif;
@@ -137,11 +137,16 @@ button {
 
 
 
-#header {
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: absolute;
     top: 0;
-    width: 27vw;
-    height: 60px;
+    margin-left: 0 auto;
+    margin-right: 0 auto;
+    margin-bottom: 10px;
+    padding: 0px 5px;
     background: orange;
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
@@ -149,16 +154,13 @@ button {
 }
 
 .link {
-    margin-bottom: 0;
-    margin-top: 10px;
     color: white;
-    font-size: 24px;
+    font-size: 1.2rem;
     text-decoration: none;
     transition: fa-spin .7s ease-in-out;
     transition: transform 0.7s ease-in-out;
 }
 
 .fa-spin-hover:hover {
-    animation: fa-spin 0.7s ease-in-out;
-    transform: scale(1.1);
+    animation: fa-spin 0.4s ease-in-out;
 }
